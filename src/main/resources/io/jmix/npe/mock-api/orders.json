@@ -1,0 +1,54 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "orderDate": "2018-02-15",
+      "orderNumber": "67890",
+      "amount": 25.99,
+      "customer": {
+        "id": 2,
+        "name": "Jane Smith"
+      }
+    },
+    {
+      "id": 2,
+      "orderDate": "2019-05-10",
+      "orderNumber": "54321",
+      "amount": 42.50,
+      "customer": {
+        "id": 3,
+        "name": "Alice Johnson"
+      }
+    },
+    {
+      "id": 3,
+      "orderDate": "2020-11-20",
+      "orderNumber": "98765",
+      "amount": 10.00,
+      "customer": {
+        "id": 4,
+        "name": "Bob Williams"
+      }
+    },
+    {
+      "id": 4,
+      "orderDate": "2021-07-08",
+      "orderNumber": "24680",
+      "amount": 75.25,
+      "customer": {
+        "id": 5,
+        "name": "Eva Martinez"
+      }
+    },
+    {
+      "id": 5,
+      "orderDate": "2022-03-30",
+      "orderNumber": "13579",
+      "amount": 50.00,
+      "customer": {
+        "id": 3,
+        "name": "Alice Johnson"
+      }
+    }
+  ]
+}

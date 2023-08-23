@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      title="msg://customerDetailView.title"
+      focusComponent="form">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.npe.entity.Customer">
+            <loader id="customerDl"/>
+            <collection id="ordersDc" property="orders" />
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <actions>
+        <action id="saveAction" type="detail_saveClose"/>
+        <action id="closeAction" type="detail_close"/>
+    </actions>
+    <layout>
+        <formLayout id="form" dataContainer="customerDc">
+            <textField id="nameField" property="name"/>
+        </formLayout>
+
+        <h4 text="msg://io.jmix.npe.entity/Customer.orders" />
+        <hbox id="buttonsPanel" classNames="buttons-panel">
+            <button id="readBtn" action="ordersDataGrid.read" />
+        </hbox>
+        <dataGrid id="ordersDataGrid"
+                  width="100%"
+                  minHeight="20em"
+                  dataContainer="ordersDc">
+            <actions>
+                <action id="read" type="list_read"/>
+            </actions>
+            <columns>
+                <column property="orderDate"/>
+                <column property="amount"/>
+            </columns>
+        </dataGrid>
+        <hbox id="detailActions">
+            <button id="saveAndCloseBtn" action="saveAction"/>
+            <button id="closeBtn" action="closeAction"/>
+        </hbox>
+    </layout>
+</view>
